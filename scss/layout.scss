@@ -1,0 +1,73 @@
+   @charset "uft-8";
+   @import './mixin';
+
+
+   input[type="number"]::-webkit-outer-spin-button,
+   input[type="number"]::-webkit-inner-spin-button {
+     -webkit-appearance: none;
+     margin: 0;
+   }
+
+   input:focus,
+   textarea:focus {
+     outline: none;
+   }
+
+   img {
+     max-width: 100%;
+   }
+
+
+   .center_box {
+     width: 95%;
+     max-width: 1440px;
+     margin: 0 auto;
+     //  @include centerY(relative);
+   }
+
+   .unMove {
+     opacity: 0;
+     transition: all 1.5s;
+   }
+
+   .moveOn {
+     transform: translate(0) !important;
+     opacity: 1 !important;
+   }
+
+   .moverWrap {
+     .movingBox {
+       opacity: 0;
+       transition: all 1.5s;
+     }
+   }
+
+   .moverOn_Wrap {
+     .movingBox {
+       transform: translate(0) !important;
+       opacity: 1 !important;
+     }
+   }
+
+
+   @for $i from 1 through 100 {
+     .delay#{$i} {
+       transition-delay: 0.1s * $i  !important;
+     }
+   }
+
+   .flex_start {
+     display: flex;
+     align-items: flex-start;
+     justify-content: space-between;
+   }
+
+   .flex_center {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+   }
+
+   .poppins {
+     font-family: 'Poppins', sans-serif;
+   }
