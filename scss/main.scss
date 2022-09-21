@@ -16,21 +16,13 @@ main {
   overflow: hidden;
   position: relative;
 
-  // &__img {
-  //   width: 95%;
-  //   max-width: 110rem;
-  //   height: 115rem;
-  //   margin: 0 auto;
-  //   background: url(../images/main/visual.jpg);
-  //   background-size: cover;
-  // }
-
   &__text {
     font-size: 15rem;
     color: #fff;
     position: absolute;
     width: 100%;
     bottom: 15rem;
+    z-index: 1;
 
     p {
       position: absolute;
@@ -40,6 +32,16 @@ main {
       gap: 5rem;
       pointer-events: none;
     }
+  }
+
+  &__layar {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    z-index: 0;
   }
 }
 
@@ -224,8 +226,6 @@ main {
   height: 41rem;
   margin: -10% 0 0 -10%;
   overflow: hidden;
-  left: 0;
-  top: 0;
   transform: scale(0);
   will-change: left, right;
   pointer-events: none;
@@ -265,7 +265,7 @@ main {
 
   .wrapper01 {
     margin-bottom: 3rem;
-    transform: translate(-15vw);
+    transform: translate(-50vw);
   }
 
   .wrapper02 {
@@ -280,6 +280,14 @@ main {
       width: 19%;
       pointer-events: none;
     }
+  }
+
+  @include pc {
+    .wrapper01 {
+      margin-bottom: 3rem;
+      transform: translate(-25vw);
+    }
+
   }
 }
 

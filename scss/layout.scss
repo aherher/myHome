@@ -72,7 +72,158 @@
      font-family: 'Poppins', sans-serif;
    }
 
+   // 헤더
+   .header {
+     position: absolute;
+     width: 100%;
+     height: 10rem;
+     top: 0;
+     left: 0;
+     z-index: 5;
 
+     &__head {
+       width: 95%;
+       height: 100%;
+       margin: 0 auto;
+       @include flexCenter;
+     }
+
+     &__logo {
+       color: #fff;
+       font-size: 1.8rem;
+       font-weight: 400;
+     }
+
+     &__menubtn,
+     &__close {
+       display: none;
+     }
+
+     @include tablet {
+       &__menu {
+         display: flex;
+         gap: 4rem;
+
+         li {
+           position: relative;
+
+           a {
+             color: #fff;
+             font-size: 1.8rem;
+           }
+
+           &:hover {
+             &:after {
+               content: '';
+               display: block;
+               width: 0.5rem;
+               height: 0.5rem;
+               background-color: #fff;
+               border-radius: 100%;
+               bottom: -1.5rem;
+               @include centerX(absolute);
+             }
+           }
+         }
+       }
+     }
+
+
+     @include mobileOnly(768px) {
+       &__menuWrap {
+         position: fixed;
+         width: 100%;
+         height: 100%;
+         right: -100%;
+         top: 0;
+         background-color: #141517;
+         z-index: 5;
+         transition: right 0.5s;
+       }
+
+       &__close {
+         background: none;
+         color: #fff;
+         font-size: 4rem;
+         top: 2rem;
+         right: 2.5%;
+         position: absolute;
+       }
+
+       &__menu {
+         margin: 15rem auto 0 auto;
+         padding: 6rem 0;
+         width: 90%;
+         height: 45.5vh;
+         border-top: 1px solid #484848;
+         border-bottom: 1px solid #484848;
+
+         li {
+           margin-bottom: 2rem;
+           transition: transform 0.3s;
+
+           a {
+             font-size: 5rem;
+             font-weight: 400;
+             color: #fff;
+             display: block;
+             transition: color 0.3s;
+           }
+
+           &:hover {
+             transform: translateX(2rem);
+
+             a {
+               color: $sky;
+             }
+           }
+         }
+       }
+
+
+       &__menubtn {
+         width: 3.2rem;
+         height: 2.2rem;
+         position: relative;
+         background: none;
+         display: flex;
+         flex-direction: column;
+         justify-content: space-between;
+
+         div {
+           width: 100%;
+           height: 0.2rem;
+           background-color: #fff;
+
+           &:nth-child(2) {
+             width: 2rem;
+             margin: 0 auto;
+             transition: width 0.3s;
+           }
+         }
+
+         &:hover {
+           div {
+             &:nth-child(2) {
+               width: 100%;
+             }
+           }
+         }
+       }
+
+       &.open {
+         .header__menuWrap {
+           right: 0;
+         }
+
+         .header__close {
+           display: block;
+         }
+       }
+     }
+   }
+
+   // 푸터
    .footer {
      background-color: #1C1D20;
      height: 100vh;

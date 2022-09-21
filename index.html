@@ -13,15 +13,31 @@
   <link href="https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/stylesheets/NotoSansKR-Hestia.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" type="text/css" href="css/common.css" />
   <link rel="stylesheet" type="text/css" href="css/main.css" />
+  <script src="https://kit.fontawesome.com/db89262daf.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-  <header class="header">
-    <div class="head">
-      <h1></h1>
-      <nav></nav>
+  <!-- 헤더 -->
+  <header class="header poppins">
+    <div class="header__head">
+      <h1 class="header__logo">© Code by ...</h1>
+      <nav class="header__menuWrap">
+        <ul class="header__menu">
+          <li><a href="#!">Works</a></li>
+          <li><a href="#!">About</a></li>
+          <li><a href="#!">Contact</a></li>
+        </ul>
+        <button class="header__close"><i class="fa-solid fa-xmark"></i></button>
+      </nav>
+      <button class="header__menubtn">
+        <div></div>
+        <div></div>
+        <div></div>
+      </button>
+
     </div>
   </header>
+  <!-- 헤더 끝 -->
   <main>
     <div class="visual">
       <video muted autoplay loop playsinline>
@@ -34,6 +50,7 @@
           <span>Lorem</span> <span>ipsum</span><span> dolor</span> <span>sit</span> <span>amet</span> <span>expedita.</span>
         </p>
       </div>
+      <div class="visual__layar"></div>
     </div>
     <div class="contents">
       <!-- about -->
@@ -156,6 +173,7 @@
       </ul>
     </div>
   </footer>
+  <script src="js/layout.js"></script>
   <script src="js/main.js"></script>
 </body>
 
