@@ -1,6 +1,7 @@
 @charset "utf-8";
 @import "./mixin";
 
+
 body {
   overflow-x: hidden;
 }
@@ -16,12 +17,23 @@ main {
   overflow: hidden;
   position: relative;
 
+  &__title {
+    color: #fff;
+    position: absolute;
+    top: 40%;
+    right: 10%;
+    transform: translateY(-50%);
+    font-size: clamp(3rem, 4vw, 4rem);
+    padding-top: 0.5rem;
+    border-top: 1px solid #fff;
+  }
+
   &__text {
     font-size: 15rem;
     color: #fff;
     position: absolute;
     width: 100%;
-    bottom: 15rem;
+    bottom: 10rem;
     z-index: 1;
 
     p {
@@ -55,7 +67,7 @@ main {
 // about
 .about {
   &__article {
-    font-size: clamp(2.5rem, 4vw, 4rem);
+    font-size: clamp(2.2rem, 4vw, 3.5rem);
     line-height: 1.4;
   }
 
@@ -173,13 +185,18 @@ main {
 
   }
 
+  &__arrow {
+    text-align: center;
+    font-size: 5rem;
+    margin: clamp(2rem, 5vw, 4rem) 0;
+  }
 
   &__more {
     width: 32rem;
     border: 1px solid #ddd;
     border-radius: 50vmax;
     text-align: center;
-    margin: 10rem auto 0 auto;
+    margin: 0 auto;
     line-height: 8rem;
     position: relative;
     overflow: hidden;
@@ -221,6 +238,8 @@ main {
 }
 
 .workItems {
+  left: 50%;
+  top: 50%;
   position: fixed;
   width: 41rem;
   height: 41rem;
