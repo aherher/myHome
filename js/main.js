@@ -1,3 +1,17 @@
+// 앵커기능
+const anker = document.querySelectorAll(".anker");
+
+
+anker.forEach(btn => {
+  btn.addEventListener("click", (e) => {
+    let link = e.target.getAttribute("href");
+    let section = document.querySelector(link);
+    let doMove = section.getBoundingClientRect().top + window.pageYOffset; //절대좌표
+    window.scrollTo({ top: doMove, behavior: 'smooth' })
+    e.preventDefault();
+  })
+});
+
 // 버튼 마우스오버
 const moreBtn = document.querySelector(".works__more");
 const layer = moreBtn.querySelector(".layer");
@@ -72,7 +86,12 @@ function roundHeight() {
 //푸터
 function footerHeight() {
   let bottomScroll = (htmlheight.offsetHeight - window.innerHeight - window.scrollY) / 1.2;
-  footer.style.transform = `translateY(-${bottomScroll}px)`;
+  let footerHeight = footer.offsetHeight;
+  if (bottomScroll <= footerHeight) {
+    footer.style.transform = `translateY(-${bottomScroll}px)`;
+  } else if (bottomScroll >= footerHeight) {
+    footer.style = '';
+  }
 }
 
 window.addEventListener("scroll", () => {
@@ -88,6 +107,8 @@ const work_lists = document.querySelector(".works__lists");
 const theWorks = document.querySelectorAll(".works__lists li");
 const workItems = document.querySelector(".workItems");
 const itemList = document.querySelector(".workItems__lists");
+const itemList_items = document.querySelector(".workItems__lists").childElementCount;
+const itemLength = 100 / itemList_items;
 
 work_lists.addEventListener("mousemove", (e) => {
   let x = e.clientX;
@@ -106,9 +127,42 @@ work_lists.addEventListener("mouseleave", () => {
 })
 
 
-theWorks.forEach((work, index) => {
+theWorks.forEach((work, index, array) => {
   work.addEventListener("mouseenter", () => {
-    let trnasIndex = index * 25;
+    let trnasIndex = index * itemLength;
+
     itemList.style.transform = `translateY(-${trnasIndex}%)`;
+  })
+});
+
+// 팝업기능
+theWorks.forEach(list => {
+  list.addEventListener("click", (e) => {
+    let poplink = list.querySelector("a").getAttribute("href");
+    let popup = document.querySelector(poplink);
+    popup.classList.add("popOn");
+    e.preventDefault();
+  });
+});
+
+const closepop_btn = document.querySelectorAll(".popup__close");
+const popup_bg = document.querySelectorAll(".popup__bg");
+const popupwraps = document.querySelectorAll(".popup");
+
+function closePop() {
+  popupwraps.forEach(pop => {
+    pop.classList.remove("popOn");
+  });
+}
+
+closepop_btn.forEach(close => {
+  close.addEventListener("click", () => {
+    closePop();
+  })
+});
+
+popup_bg.forEach(bg => {
+  bg.addEventListener("click", () => {
+    closePop();
   })
 });

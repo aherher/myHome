@@ -8,6 +8,7 @@
   <meta name="robots" content="noindex,nofollow" />
   <meta name="format-detection" content="telephone=no" />
   <meta http-equiv="X-UA-Compatible" content="IE-Edge" />
+  <meta property="og:image" content="images/linkkakao_bar.jpg">
   <title>Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet" />
   <link href="https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/stylesheets/NotoSansKR-Hestia.css" rel="stylesheet" type="text/css" />
@@ -23,8 +24,8 @@
       <h1 class="header__logo">© Code by Jeong seung jin</h1>
       <nav class="header__menuWrap">
         <ul class="header__menu">
-          <li><a href="#!">Works</a></li>
-          <li><a href="#!">About</a></li>
+          <li class="anker"><a href="#work">Works</a></li>
+          <li class="anker"><a href="#about">About</a></li>
           <li><a href="#!">Career</a></li>
         </ul>
         <button class="header__close"><i class="fa-solid fa-xmark"></i></button>
@@ -39,6 +40,7 @@
   </header>
   <!-- 헤더 끝 -->
   <main>
+    <!-- 비주얼 -->
     <div class="visual">
       <div class="visual__title poppins">
         <p><i class="fa-solid fa-arrow-down-to-line"></i></p>
@@ -58,6 +60,7 @@
       </div>
       <div class="visual__layar"></div>
     </div>
+    <!-- 비주얼 끝 -->
     <div class="contents">
       <!-- about -->
       <div class="center_box">
@@ -73,49 +76,89 @@
               좀 더 인터렉티브한 웹사이트를 만들기 위해 노력하고 있습니다.<br />
               저의 역량을 발전시키며 오랫동안 함께할 회사를 찾고 있습니다.
             </p>
-            <div class="right_btn"><a href="#!">About me</a></div>
+            <div class="right_btn anker"><a href="#about">About me</a></div>
           </div>
         </div>
       </div>
       <!-- about 끝-->
       <!-- works -->
-      <div class="works">
+      <div id="work" class="works">
         <p class="works__title center_box">WORK LIST</p>
         <ul class="works__lists">
           <li>
             <a href="#!">
               <div class="center_box">
-                <p class="siteName">GraphicHunters</p>
-                <p class="doing">Published</p>
+                <p class="siteName">풍류사운드</p>
+                <p class="doing">오픈 전</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#pop01">
+              <div class="center_box">
+                <p class="siteName">우리봄</p>
+                <p class="doing">오픈 전</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#pop01">
+              <div class="center_box">
+                <p class="siteName">클럽 피아프</p>
+                <p class="doing">오픈 전</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#kimseeun">
+              <div class="center_box">
+                <p class="siteName">김세은닷컴</p>
+                <p class="doing">서비스중</p>
               </div>
             </a>
           </li>
           <li>
             <a href="#!">
               <div class="center_box">
-                <p class="siteName">GraphicHunters</p>
-                <p class="doing">Published</p>
+                <p class="siteName">300FIT</p>
+                <p class="doing">서비스중</p>
               </div>
             </a>
           </li>
           <li>
             <a href="#!">
               <div class="center_box">
-                <p class="siteName">GraphicHunters</p>
-                <p class="doing">Published</p>
+                <p class="siteName">Belp gaming</p>
+                <p class="doing">서비스중</p>
               </div>
             </a>
           </li>
           <li>
             <a href="#!">
               <div class="center_box">
-                <p class="siteName">GraphicHunters</p>
-                <p class="doing">Published</p>
+                <p class="siteName">블록체인 컨퍼런스</p>
+                <p class="doing">서비스중</p>
               </div>
             </a>
           </li>
           <li>
             <a href="#!">
+              <div class="center_box">
+                <p class="siteName">법무법인 더킴</p>
+                <p class="doing">서비스중</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#!">
+              <div class="center_box">
+                <p class="siteName">인벤션</p>
+                <p class="doing">서비스중</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#townhouse">
               <div class="center_box">
                 <p class="siteName">Townhouse Hotel</p>
                 <p class="doing">개인 프로젝트</p>
@@ -123,7 +166,7 @@
             </a>
           </li>
           <li>
-            <a href="#!">
+            <a href="#porto">
               <div class="center_box">
                 <p class="siteName">Porto</p>
                 <p class="doing">개인 프로젝트</p>
@@ -131,7 +174,7 @@
             </a>
           </li>
           <li>
-            <a href="#!">
+            <a href="#todo">
               <div class="center_box">
                 <p class="siteName">Todo List</p>
                 <p class="doing">개인 프로젝트</p>
@@ -155,14 +198,110 @@
               <div><img src="images/main/list_inner02.jpg" alt=""></div>
             </li>
             <li>
-              <div><img src="images/main/list_inner03.jpg" alt=""></div>
+              <div><img src="images/main/inner_kimseeun.jpg" alt="김세은닷컴"></div>
             </li>
             <li>
               <div><img src="images/main/list_inner04.jpg" alt=""></div>
             </li>
+            <li>
+              <div><img src="images/main/inner_hotel.jpg" alt="체스터타운하우스호텔"></div>
+            </li>
+            <li>
+              <div><img src="images/main/inner_porto.jpg" alt="폴토"></div>
+            </li>
+            <li>
+              <div><img src="images/main/inner_todo.jpg" alt="투두리스트"></div>
+            </li>
           </ul>
         </div>
+      </div>
 
+
+      <div id="taehyung" class="popup">
+        <div class="popup__box">
+          <span class="popup__close"><i class="fa-solid fa-xmark"></i></span>
+          <div class="popup__thum"><img src="images/main/thum01.jpg" alt=""> </div>
+          <dl class="popup__infos">
+            <dt>태경화학 <span>오픈 전</span></dt>
+            <dd><span class="th">- URL</span><span class="td"><a href="" target="_blank">임시주소</a></span></dd>
+            <dd><span class="th">- 타입</span><span class="td">반응형</span></dd>
+            <dd><span class="th">- 참여인원</span><span class="td">디자인1 / 퍼블리셔1 / 백엔드1</span></dd>
+            <dd><span class="th">- 참여도</span><span class="td">퍼블리싱 100%</span></dd>
+            <dd><span class="th">- 작업방식</span><span class="td">하드코딩 100%</span></dd>
+            <dd><span class="th">- 구성</span><span class="td">html / scss / javacsript</span></dd>
+          </dl>
+        </div>
+        <div class="popup__bg"></div>
+      </div>
+
+
+      <div id="kimseeun" class="popup">
+        <div class="popup__box">
+          <span class="popup__close"><i class="fa-solid fa-xmark"></i></span>
+          <div class="popup__thum"><img src="images/main/thum_kimseeun.jpg" alt=""> </div>
+          <dl class="popup__infos">
+            <dt>김세은닷컴</dt>
+            <dd><span class="th">- URL</span><span class="td"><a href="https://kimseeun.com/" target="_blank">https://kimseeun.com/</a></span></dd>
+            <dd><span class="th">- 타입</span><span class="td">반응형</span></dd>
+            <dd><span class="th">- 참여인원</span><span class="td">디자인1 / 퍼블리셔1 / 백엔드1</span></dd>
+            <dd><span class="th">- 참여도</span><span class="td">퍼블리싱 100%</span></dd>
+            <dd><span class="th">- 작업방식</span><span class="td">하드코딩 100%</span></dd>
+            <dd><span class="th">- 구성</span><span class="td">html / scss / javacsript</span></dd>
+          </dl>
+        </div>
+        <div class="popup__bg"></div>
+      </div>
+
+
+      <div id="townhouse" class="popup">
+        <div class="popup__box">
+          <span class="popup__close"><i class="fa-solid fa-xmark"></i></span>
+          <div class="popup__thum"><img src="images/main/thum_townhouse.jpg" alt=""> </div>
+          <dl class="popup__infos">
+            <dt>타운하우스 호텔 <span>(개인 프로젝트)</span></dt>
+            <dd><span class="th">- URL</span><span class="td"><a href="https://townhousehotel.netlify.app/" target="_blank">https://townhousehotel.netlify.app/</a></span></dd>
+            <dd><span class="th">- 타입</span><span class="td">반응형</span></dd>
+            <dd><span class="th">- 참여인원</span><span class="td">디자인1 / 퍼블리셔1 / 백엔드1</span></dd>
+            <dd><span class="th">- 참여도</span><span class="td">퍼블리싱 100%</span></dd>
+            <dd><span class="th">- 작업방식</span><span class="td">하드코딩 100%</span></dd>
+            <dd><span class="th">- 구성</span><span class="td">html / scss / javacsript</span></dd>
+          </dl>
+        </div>
+        <div class="popup__bg"></div>
+      </div>
+
+      <div id="porto" class="popup">
+        <div class="popup__box">
+          <span class="popup__close"><i class="fa-solid fa-xmark"></i></span>
+          <div class="popup__thum"><img src="images/main/thum_porto.jpg" alt=""> </div>
+          <dl class="popup__infos">
+            <dt>폴토 <span>(개인 프로젝트)</span></dt>
+            <dd><span class="th">- URL</span><span class="td"><a href="https://site-porto.netlify.app/" target="_blank">https://site-porto.netlify.app/</a></span></dd>
+            <dd><span class="th">- 타입</span><span class="td">반응형</span></dd>
+            <dd><span class="th">- 참여인원</span><span class="td">디자인1 / 퍼블리셔1 / 백엔드1</span></dd>
+            <dd><span class="th">- 참여도</span><span class="td">퍼블리싱 100%</span></dd>
+            <dd><span class="th">- 작업방식</span><span class="td">하드코딩 100%</span></dd>
+            <dd><span class="th">- 구성</span><span class="td">html / scss / jQuery</span></dd>
+          </dl>
+        </div>
+        <div class="popup__bg"></div>
+      </div>
+
+      <div id="todo" class="popup">
+        <div class="popup__box">
+          <span class="popup__close"><i class="fa-solid fa-xmark"></i></span>
+          <div class="popup__thum"><img src="images/main/thum_todolist.jpg" alt=""> </div>
+          <dl class="popup__infos">
+            <dt>투두리스트 <span>(개인 프로젝트)</span></dt>
+            <dd><span class="th">- URL</span><span class="td"><a href="https://maked-todo.netlify.app/" target="_blank">https://maked-todo.netlify.app/</a></span></dd>
+            <dd><span class="th">- 타입</span><span class="td">반응형</span></dd>
+            <dd><span class="th">- 참여인원</span><span class="td">디자인1 / 퍼블리셔1 / 백엔드1</span></dd>
+            <dd><span class="th">- 참여도</span><span class="td">퍼블리싱 100%</span></dd>
+            <dd><span class="th">- 작업방식</span><span class="td">하드코딩 100%</span></dd>
+            <dd><span class="th">- 구성</span><span class="td">html / scss / jQuery</span></dd>
+          </dl>
+        </div>
+        <div class="popup__bg"></div>
       </div>
 
       <!-- works 끝 -->
@@ -193,7 +332,7 @@
       <div class="round"></div>
     </div>
   </main>
-  <footer class="footer">
+  <footer id="about" class="footer">
     <div class="footer__foot center_box">
       <div class="footer__title">
         <p>Information</p>
