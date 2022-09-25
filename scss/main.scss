@@ -13,7 +13,7 @@ main {
 
 .visual {
   height: 100vh;
-  background: url(../images/main/vod_backgorund.jpg) no-repeat center;
+  background: url(../images/main/visual_bg.png) no-repeat center;
   overflow: hidden;
   position: relative;
 
@@ -34,7 +34,7 @@ main {
     color: #fff;
     position: absolute;
     width: 100%;
-    bottom: 10rem;
+    bottom: 5rem;
     z-index: 1;
 
     p {
