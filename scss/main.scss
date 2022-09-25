@@ -26,6 +26,7 @@ main {
     font-size: clamp(3rem, 4vw, 4rem);
     padding-top: 0.5rem;
     border-top: 1px solid #fff;
+    z-index: 1;
   }
 
   &__text {
@@ -52,7 +53,7 @@ main {
     height: 100%;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.3);
     z-index: 0;
   }
 }
